@@ -1,0 +1,657 @@
+2020-03-17 11:00:38 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h46m55s167ms540µs900ns).
+2020-03-17 11:02:24 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.williams.mint.mintfinancial.service.CardService.castToCardApiResponse(CardService.java:55)
+	at com.williams.mint.mintfinancial.service.CardService.cardVerification(CardService.java:46)
+	at com.williams.mint.mintfinancial.controller.CardController.getCardVerification(CardController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-17 11:15:24 - Starting MintfinancialApplication on wsticks with PID 13908 (C:\Users\williamsondrums\Downloads\mintfinancial\target\classes started by williamsondrums in C:\Users\williamsondrums\Downloads\mintfinancial)
+2020-03-17 11:15:24 - No active profile set, falling back to default profiles: default
+2020-03-17 11:15:28 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-17 11:15:28 - Finished Spring Data repository scanning in 224ms. Found 1 JPA repository interfaces.
+2020-03-17 11:15:30 - Tomcat initialized with port(s): 8081 (http)
+2020-03-17 11:15:30 - Initializing ProtocolHandler ["http-nio-8081"]
+2020-03-17 11:15:30 - Starting service [Tomcat]
+2020-03-17 11:15:30 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-17 11:15:31 - Initializing Spring embedded WebApplicationContext
+2020-03-17 11:15:31 - Root WebApplicationContext: initialization completed in 6297 ms
+2020-03-17 11:15:32 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-17 11:15:32 - HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-17 11:15:33 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-17 11:15:33 - HikariPool-1 - Starting...
+2020-03-17 11:15:37 - HikariPool-1 - Start completed.
+2020-03-17 11:15:37 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-03-17 11:15:43 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-17 11:15:43 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-17 11:15:45 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-17 11:15:45 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-17 11:15:46 - Starting ProtocolHandler ["http-nio-8081"]
+2020-03-17 11:15:46 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-03-17 11:15:46 - Started MintfinancialApplication in 24.373 seconds (JVM running for 31.447)
+2020-03-17 11:16:11 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-17 11:16:11 - Initializing Servlet 'dispatcherServlet'
+2020-03-17 11:16:11 - Completed initialization in 36 ms
+2020-03-17 11:16:13 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.williams.mint.mintfinancial.service.CardService.castToCardApiResponse(CardService.java:55)
+	at com.williams.mint.mintfinancial.service.CardService.cardVerification(CardService.java:46)
+	at com.williams.mint.mintfinancial.controller.CardController.getCardVerification(CardController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-17 11:19:53 - Starting MintfinancialApplication on wsticks with PID 9256 (C:\Users\williamsondrums\Downloads\mintfinancial\target\classes started by williamsondrums in C:\Users\williamsondrums\Downloads\mintfinancial)
+2020-03-17 11:19:53 - No active profile set, falling back to default profiles: default
+2020-03-17 11:19:55 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-17 11:19:55 - Finished Spring Data repository scanning in 201ms. Found 1 JPA repository interfaces.
+2020-03-17 11:19:57 - Tomcat initialized with port(s): 8081 (http)
+2020-03-17 11:19:57 - Initializing ProtocolHandler ["http-nio-8081"]
+2020-03-17 11:19:57 - Starting service [Tomcat]
+2020-03-17 11:19:57 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-17 11:19:58 - Initializing Spring embedded WebApplicationContext
+2020-03-17 11:19:58 - Root WebApplicationContext: initialization completed in 4036 ms
+2020-03-17 11:19:58 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-17 11:19:58 - HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-17 11:19:59 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-17 11:19:59 - HikariPool-1 - Starting...
+2020-03-17 11:20:02 - HikariPool-1 - Start completed.
+2020-03-17 11:20:02 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-03-17 11:20:05 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-17 11:20:05 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-17 11:20:07 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-17 11:20:07 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-17 11:20:08 - Starting ProtocolHandler ["http-nio-8081"]
+2020-03-17 11:20:08 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-03-17 11:20:08 - Started MintfinancialApplication in 15.8 seconds (JVM running for 19.669)
+2020-03-17 11:20:11 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-17 11:20:11 - Initializing Servlet 'dispatcherServlet'
+2020-03-17 11:20:11 - Completed initialization in 28 ms
+2020-03-17 11:20:15 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.williams.mint.mintfinancial.service.CardService.cardVerification(CardService.java:48)
+	at com.williams.mint.mintfinancial.controller.CardController.getCardVerification(CardController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-17 11:26:49 - Starting MintfinancialApplication on wsticks with PID 9356 (C:\Users\williamsondrums\Downloads\mintfinancial\target\classes started by williamsondrums in C:\Users\williamsondrums\Downloads\mintfinancial)
+2020-03-17 11:26:49 - No active profile set, falling back to default profiles: default
+2020-03-17 11:26:51 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-17 11:26:51 - Finished Spring Data repository scanning in 206ms. Found 1 JPA repository interfaces.
+2020-03-17 11:26:53 - Tomcat initialized with port(s): 8081 (http)
+2020-03-17 11:26:53 - Initializing ProtocolHandler ["http-nio-8081"]
+2020-03-17 11:26:53 - Starting service [Tomcat]
+2020-03-17 11:26:53 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-17 11:26:53 - Initializing Spring embedded WebApplicationContext
+2020-03-17 11:26:53 - Root WebApplicationContext: initialization completed in 4248 ms
+2020-03-17 11:26:54 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-17 11:26:54 - HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-17 11:26:55 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-17 11:26:55 - HikariPool-1 - Starting...
+2020-03-17 11:26:58 - HikariPool-1 - Start completed.
+2020-03-17 11:26:58 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-03-17 11:27:01 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-17 11:27:01 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-17 11:27:02 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-17 11:27:03 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-17 11:27:04 - Starting ProtocolHandler ["http-nio-8081"]
+2020-03-17 11:27:04 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-03-17 11:27:04 - Started MintfinancialApplication in 15.972 seconds (JVM running for 21.195)
+2020-03-17 11:29:59 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-17 11:29:59 - Initializing Servlet 'dispatcherServlet'
+2020-03-17 11:29:59 - Completed initialization in 44 ms
+2020-03-17 11:30:02 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.williams.mint.mintfinancial.service.CardService.cardVerification(CardService.java:48)
+	at com.williams.mint.mintfinancial.controller.CardController.getCardVerification(CardController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-17 11:30:26 - Starting MintfinancialApplication on wsticks with PID 9816 (C:\Users\williamsondrums\Downloads\mintfinancial\target\classes started by williamsondrums in C:\Users\williamsondrums\Downloads\mintfinancial)
+2020-03-17 11:30:26 - No active profile set, falling back to default profiles: default
+2020-03-17 11:30:28 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-17 11:30:28 - Finished Spring Data repository scanning in 203ms. Found 1 JPA repository interfaces.
+2020-03-17 11:30:30 - Tomcat initialized with port(s): 8081 (http)
+2020-03-17 11:30:30 - Initializing ProtocolHandler ["http-nio-8081"]
+2020-03-17 11:30:30 - Starting service [Tomcat]
+2020-03-17 11:30:30 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-17 11:30:31 - Initializing Spring embedded WebApplicationContext
+2020-03-17 11:30:31 - Root WebApplicationContext: initialization completed in 4729 ms
+2020-03-17 11:30:32 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-17 11:30:32 - HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-17 11:30:32 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-17 11:30:33 - HikariPool-1 - Starting...
+2020-03-17 11:30:36 - HikariPool-1 - Start completed.
+2020-03-17 11:30:36 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-03-17 11:30:40 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-17 11:30:40 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-17 11:30:41 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-17 11:30:42 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-17 11:30:42 - Starting ProtocolHandler ["http-nio-8081"]
+2020-03-17 11:30:42 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-03-17 11:30:42 - Started MintfinancialApplication in 17.861 seconds (JVM running for 22.585)
+2020-03-17 11:30:51 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-17 11:30:51 - Initializing Servlet 'dispatcherServlet'
+2020-03-17 11:30:51 - Completed initialization in 24 ms
+2020-03-17 11:30:53 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2020-03-17 11:30:54 - Kafka version: 2.3.1
+2020-03-17 11:30:54 - Kafka commitId: 18a913733fb71c01
+2020-03-17 11:30:54 - Kafka startTimeMs: 1584441054182
+2020-03-17 11:30:54 - [Producer clientId=producer-1] Cluster ID: hvnTHIs0TTW3SSdptnCJew
+2020-03-17 13:11:10 - Starting MintfinancialApplication on wsticks with PID 13520 (C:\Users\williamsondrums\Downloads\mintfinancial\target\classes started by williamsondrums in C:\Users\williamsondrums\Downloads\mintfinancial)
+2020-03-17 13:11:10 - No active profile set, falling back to default profiles: default
+2020-03-17 13:11:12 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-17 13:11:12 - Finished Spring Data repository scanning in 225ms. Found 1 JPA repository interfaces.
+2020-03-17 13:11:14 - Tomcat initialized with port(s): 8081 (http)
+2020-03-17 13:11:14 - Initializing ProtocolHandler ["http-nio-8081"]
+2020-03-17 13:11:14 - Starting service [Tomcat]
+2020-03-17 13:11:14 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-17 13:11:14 - Initializing Spring embedded WebApplicationContext
+2020-03-17 13:11:14 - Root WebApplicationContext: initialization completed in 4372 ms
+2020-03-17 13:11:15 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-17 13:11:15 - HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-17 13:11:16 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-17 13:11:16 - HikariPool-1 - Starting...
+2020-03-17 13:11:19 - HikariPool-1 - Start completed.
+2020-03-17 13:11:19 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-03-17 13:11:22 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-17 13:11:22 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-17 13:11:23 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-17 13:11:24 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-17 13:11:24 - Starting ProtocolHandler ["http-nio-8081"]
+2020-03-17 13:11:24 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-03-17 13:11:24 - Started MintfinancialApplication in 15.709 seconds (JVM running for 20.606)
+2020-03-17 13:13:59 - Starting MintfinancialApplication on wsticks with PID 12028 (C:\Users\williamsondrums\Downloads\mintfinancial\target\classes started by williamsondrums in C:\Users\williamsondrums\Downloads\mintfinancial)
+2020-03-17 13:13:59 - No active profile set, falling back to default profiles: default
+2020-03-17 13:14:01 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-17 13:14:02 - Finished Spring Data repository scanning in 265ms. Found 1 JPA repository interfaces.
+2020-03-17 13:14:04 - Tomcat initialized with port(s): 8081 (http)
+2020-03-17 13:14:05 - Initializing ProtocolHandler ["http-nio-8081"]
+2020-03-17 13:14:05 - Starting service [Tomcat]
+2020-03-17 13:14:05 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-17 13:14:05 - Initializing Spring embedded WebApplicationContext
+2020-03-17 13:14:05 - Root WebApplicationContext: initialization completed in 5480 ms
+2020-03-17 13:14:06 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-17 13:14:06 - HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-17 13:14:07 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-17 13:14:07 - HikariPool-1 - Starting...
+2020-03-17 13:14:09 - HikariPool-1 - Start completed.
+2020-03-17 13:14:09 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-03-17 13:14:14 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-17 13:14:14 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-17 13:14:15 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-17 13:14:16 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-17 13:14:16 - Starting ProtocolHandler ["http-nio-8081"]
+2020-03-17 13:14:16 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-03-17 13:14:16 - Started MintfinancialApplication in 17.837 seconds (JVM running for 22.214)
+2020-03-17 13:14:17 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-17 13:14:17 - Initializing Servlet 'dispatcherServlet'
+2020-03-17 13:14:17 - Completed initialization in 23 ms
+2020-03-17 13:14:29 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2020-03-17 13:14:29 - Kafka version: 2.3.1
+2020-03-17 13:14:29 - Kafka commitId: 18a913733fb71c01
+2020-03-17 13:14:29 - Kafka startTimeMs: 1584447269626
+2020-03-17 13:14:30 - [Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {https://lookup.binlist.net/=INVALID_TOPIC_EXCEPTION}
+2020-03-17 13:14:30 - [Producer clientId=producer-1] Metadata response reported invalid topics [https://lookup.binlist.net/]
+2020-03-17 13:14:30 - [Producer clientId=producer-1] Cluster ID: hvnTHIs0TTW3SSdptnCJew
+2020-03-17 13:14:30 - Exception thrown when sending a message with key='null' and payload='CardResponse(success=true, paylaod=Payload(scheme=mastercard, type=debit, bank=GTBANK))' to topic https://lookup.binlist.net/:
+org.apache.kafka.common.errors.InvalidTopicException: Invalid topics: [https://lookup.binlist.net/]
+2020-03-17 13:17:01 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:03 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:05 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:07 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:10 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:12 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:16 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:19 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:22 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:25 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:28 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:31 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:34 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:37 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:40 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:43 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:46 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:49 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:53 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:56 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:17:59 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:02 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:05 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:08 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:11 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:14 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:17 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:20 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:23 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:26 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:30 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:33 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:36 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:39 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:42 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:45 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:48 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:51 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:54 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:18:57 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:19:00 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:19:03 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:19:06 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:19:10 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:19:13 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:19:16 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:19:19 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:19:22 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:19:25 - [Producer clientId=producer-1] Connection to node 0 (wsticks/192.168.8.102:9092) could not be established. Broker may not be available.
+2020-03-17 13:19:30 - [Producer clientId=producer-1] Error while fetching metadata with correlation id 3 : {https://lookup.binlist.net/=INVALID_TOPIC_EXCEPTION}
+2020-03-17 13:19:30 - [Producer clientId=producer-1] Metadata response reported invalid topics [https://lookup.binlist.net/]
+2020-03-17 13:26:32 - Starting MintfinancialApplication on wsticks with PID 18904 (C:\Users\williamsondrums\Downloads\mintfinancial\target\classes started by williamsondrums in C:\Users\williamsondrums\Downloads\mintfinancial)
+2020-03-17 13:26:32 - No active profile set, falling back to default profiles: default
+2020-03-17 13:26:34 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-03-17 13:26:34 - Finished Spring Data repository scanning in 217ms. Found 1 JPA repository interfaces.
+2020-03-17 13:26:36 - Tomcat initialized with port(s): 8081 (http)
+2020-03-17 13:26:37 - Initializing ProtocolHandler ["http-nio-8081"]
+2020-03-17 13:26:37 - Starting service [Tomcat]
+2020-03-17 13:26:37 - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-17 13:26:37 - Initializing Spring embedded WebApplicationContext
+2020-03-17 13:26:37 - Root WebApplicationContext: initialization completed in 4809 ms
+2020-03-17 13:26:38 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-03-17 13:26:38 - HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-03-17 13:26:38 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-03-17 13:26:39 - HikariPool-1 - Starting...
+2020-03-17 13:26:41 - HikariPool-1 - Start completed.
+2020-03-17 13:26:41 - HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-03-17 13:26:44 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-03-17 13:26:44 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-17 13:26:46 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-17 13:26:46 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-17 13:26:47 - Starting ProtocolHandler ["http-nio-8081"]
+2020-03-17 13:26:47 - Tomcat started on port(s): 8081 (http) with context path ''
+2020-03-17 13:26:47 - Started MintfinancialApplication in 16.934 seconds (JVM running for 21.074)
+2020-03-17 13:27:11 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-17 13:27:11 - Initializing Servlet 'dispatcherServlet'
+2020-03-17 13:27:11 - Completed initialization in 36 ms
+2020-03-17 13:27:13 - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2020-03-17 13:27:14 - Kafka version: 2.3.1
+2020-03-17 13:27:14 - Kafka commitId: 18a913733fb71c01
+2020-03-17 13:27:14 - Kafka startTimeMs: 1584448034159
+2020-03-17 13:27:14 - [Producer clientId=producer-1] Cluster ID: hvnTHIs0TTW3SSdptnCJew
